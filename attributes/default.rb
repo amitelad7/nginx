@@ -41,6 +41,7 @@ default[:nginx][:pid] = "/var/run/nginx.pid"
 default[:nginx][:install_method] = 'package'
 
 default[:nginx][:gzip]              = "on"
+default[:nginx][:gzip_min_length]   = 20
 default[:nginx][:gzip_http_version] = "1.0"
 default[:nginx][:gzip_comp_level]   = "2"
 default[:nginx][:gzip_proxied]      = "any"
@@ -64,3 +65,4 @@ default[:nginx][:worker_connections] = 1024
 default[:nginx][:server_names_hash_bucket_size] = 64
 
 default[:nginx][:disable_access_log] = false
+default[:nginx][:log_formats]        = []
